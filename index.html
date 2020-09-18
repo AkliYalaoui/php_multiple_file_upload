@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload | File</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="d-flex">
+                <h2>Online Gallery</h2>
+                <form id="upload-file" method="post" enctype="multipart/form-data">
+                    <input type="file" name="my_file[]" multiple required>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="4194304" />
+                    <input type="submit" value="upload">
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="gallery">
+        <div class="container">
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </div>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
+</html>
